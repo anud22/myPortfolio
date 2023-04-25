@@ -1,7 +1,9 @@
 :root{
-    --primary-color:rgb(152, 220, 252);
-    --h1-font-size:220%;
-    --h2-font-size:180%;
+    --primary-color: #f1e3e3;
+    --background-color:red;
+    --h1-font-size:180%;
+    --h2-font-size:120%;
+    --a-font-size:80%;
     --left-margin:20px;
   }
   body {
@@ -11,24 +13,27 @@
     justify-content: flex-start;
     font-size: 16px;
     height: 100vh;
-    background-color: #fff;
+    background-color: #242222;
+    color:var(--primary-color);
+    font-family: Monaco,Courier New, Garamond;
   }
   
  header {
     width: 100%;
-    /*height: 7%;*/
-    background-color: #40484e;
+     background-color: #2c3033;
     display: flex;
+    justify-content: center;
  }
  header h1 {
     font-size: var(--h1-font-size);
-    background-color: var(--primary-color);
     color: #000;
+    background-color: var(--primary-color);
     padding-right: 1%;
     padding-left: 2%;
     margin: .5% ;
-    width:25%;
     text-align: right;
+    border: 1px solid var(--primary-color);
+    border-radius: 100%;
   }
   header nav  {
     display: flex;
@@ -37,61 +42,77 @@
     align-items: center;
   }
   
-  header nav ul {
+  header nav ul, .contact-me nav ul{
     display: flex;
     justify-content: space-between;
     min-width: 450px;
     margin-right: 50px;
-    font-weight: bold;
   }
-  header nav ul a {
+
+  header nav ul a, .contact-me nav ul a {
     color: var(--primary-color);
-    font-size: 140%;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
+    font-size: var(--a-font-size);
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #380b12;
   }
   
+ 
+  section{
+    margin-bottom: 10px;
+  }
    
  main{
     width: 100%;
-   /* height: 93%;*/
     display: flex;
     flex-direction: column;
  }
  .intro{
     width: 100%;
-    height: 10%;
+    height: 8%;
     display: flex;
-  position: relative;
+    position: relative;
  }
- .intro img{
-    width: 100%;
-  }
-  .intro h2{
+  .intro pre{
     position: absolute;
-    top: calc(70%);
-    left:calc(60%);
-    width: 30%;
-    text-align: center;
+    top: calc(30%);
+    left:calc(25%);
+    width: 50%;
+    text-align: left;
     margin-right: 20%;
     z-index: 1;
     font-size: var(--h2-font-size);
-    background-color: var(--primary-color);
+    text-shadow: 2px 2px 4px #000000;
+    font-family: "Sofia", Cursive, sans-serif;
+    font-style: italic;
+  }
+  .bkground-img{
+    position: relative;
+    width: 100%;
+    opacity: .8;
+  }
+  .profile-img{
+    position: absolute;
+    z-index: 9;
+    width: 15%;
+    height:80%;
+    object-fit: cover;
+    transform: translate(20%, 10%);
   }
 
  .about-me{
     width: 100%;
-    height: 15%;
+   /* height: 15%;*/
     display: flex;
+    font-size: .9rem;
  }
- .about-me h1{
+ .about-me h1, .work h1,.contact-me h1{
     width: 20%;
     font-size: var(--h1-font-size);
     padding: 15px;
     text-align: right;
     border-right: 4px solid gray;
   }
-  .about-me .details{
+  .about-me .details, .work .details, .contact-me .details{
     width: 70%;
     padding: 15px;
     margin-left: var(--left-margin);
@@ -101,26 +122,20 @@
   }
  .work{
     width: 100%;
-    height:70%;
+   /* height:50%;*/
     display: flex;
+    background-color: red;
  }
- .work h1{
-    width: 20%;
-    font-size: var(--h1-font-size);
-    padding: 15px;
-    text-align: right;
-    border-right: 4px solid gray;
-  }
+
   .work .details{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 70%;
     justify-content: space-between;
-    margin-left: var(--left-margin);
   }
   .work .details img{
     border: 4px solid var(--primary-color);
+    object-fit: cover;
   }
   .mern1{
     border: 4px solid var(--primary-color);
@@ -128,24 +143,14 @@
 
   }
 
-  .projects1{
-    height:25%;
+  .projects1, .projects2{
+    height:22%;
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
-  .projects1 img{
+  .projects1 img, .projects2 img{
     width: 47%;
-  }
-  .projects2{
-    height:25%;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .projects2 img{
-    width: 47%;
-  
   }
 
   .contact-me{
@@ -155,31 +160,19 @@
   }
   .contact-me h1{
     width: 17%;
-    font-size: var(--h1-font-size);
-    padding: 15px;
-    text-align: right;
-    border-right: 4px solid gray;
   }
   .contact-me .details{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 70%;
     justify-content: space-between;
-    margin-left: var(--left-margin);
   }
+ 
   .contact-me nav ul{
-    display: flex;
-    justify-content: space-between;
     width:100%;
-    font-weight: bold;
   }
   
   .contact-me nav ul a {
-    color: var(--primary-color);
-    font-size: 140%;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
     align-items: center;
   }
   
