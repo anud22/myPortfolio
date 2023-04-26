@@ -1,8 +1,9 @@
 :root{
     --primary-color: #f1e3e3;
-    --background-color:red;
+    --background-color:rgb(58, 49, 49);
     --h1-font-size:180%;
     --h2-font-size:120%;
+    --h4-font-size:100%;
     --a-font-size:80%;
     --left-margin:20px;
   }
@@ -13,40 +14,41 @@
     justify-content: flex-start;
     font-size: 16px;
     height: 100vh;
-    background-color: #242222;
+    width:100vw;
+    min-height: 100vh;
+    min-width:100vw;
+    margin: 0;
     color:var(--primary-color);
     font-family: Monaco,Courier New, Garamond;
+    background-color:var(--background-color);;
   }
   
  header {
     width: 100%;
-     background-color: #2c3033;
+    background-color: #2c3033;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
  }
  header h1 {
     font-size: var(--h1-font-size);
     color: #000;
     background-color: var(--primary-color);
-    padding-right: 1%;
-    padding-left: 2%;
-    margin: .5% ;
-    text-align: right;
+    margin-left: 10% ;
     border: 1px solid var(--primary-color);
     border-radius: 100%;
+    text-align: center;
   }
-  header nav  {
-    display: flex;
-    justify-content: flex-end;
-    width:60%;
-    align-items: center;
-  }
-  
+    
   header nav ul, .contact-me nav ul{
     display: flex;
-    justify-content: space-between;
-    min-width: 450px;
-    margin-right: 50px;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+
+    list-style: none;
+  }
+  header nav li , .contact-me nav li {
+    margin: 0 40px;
   }
 
   header nav ul a, .contact-me nav ul a {
@@ -56,10 +58,6 @@
     text-shadow: 2px 2px 4px #380b12;
   }
   
- 
-  section{
-    margin-bottom: 10px;
-  }
    
  main{
     width: 100%;
@@ -72,11 +70,16 @@
     display: flex;
     position: relative;
  }
-  .intro pre{
+ .pre-text{
+    width: 70%;
+    height: 65%;
     position: absolute;
-    top: calc(30%);
-    left:calc(25%);
-    width: 50%;
+    top: calc(22%);
+    left:calc(22%);
+    overflow: auto;
+ }
+  .intro pre{
+   
     text-align: left;
     margin-right: 20%;
     z-index: 1;
@@ -84,6 +87,7 @@
     text-shadow: 2px 2px 4px #000000;
     font-family: "Sofia", Cursive, sans-serif;
     font-style: italic;
+
   }
   .bkground-img{
     position: relative;
@@ -95,25 +99,24 @@
     z-index: 9;
     width: 15%;
     height:80%;
-    object-fit: cover;
     transform: translate(20%, 10%);
   }
-
+img{
+    object-fit: cover;
+}
  .about-me{
     width: 100%;
-   /* height: 15%;*/
     display: flex;
-    font-size: .9rem;
  }
  .about-me h1, .work h1,.contact-me h1{
     width: 20%;
     font-size: var(--h1-font-size);
-    padding: 15px;
-    text-align: right;
+    padding-top: 15px;
+    text-align: center;
     border-right: 4px solid gray;
   }
   .about-me .details, .work .details, .contact-me .details{
-    width: 70%;
+    width: 75%;
     padding: 15px;
     margin-left: var(--left-margin);
   }
@@ -122,9 +125,8 @@
   }
  .work{
     width: 100%;
-   /* height:50%;*/
+    height:45%;
     display: flex;
-    background-color: red;
  }
 
   .work .details{
@@ -133,34 +135,50 @@
     height: 100%;
     justify-content: space-between;
   }
-  .work .details img{
-    border: 4px solid var(--primary-color);
-    object-fit: cover;
+  .mern1, .iot,.react,.mern2,.css{
+    height: 45%;
+    width: 100%;
   }
-  .mern1{
+  .mern1, .iot,.react,.mern2,.css{
+    position: relative;
+  }
+  .work .details a img{
     border: 4px solid var(--primary-color);
-    height:45%;
-
+    height:100%;
+    width: 100%
   }
 
   .projects1, .projects2{
-    height:22%;
+    height: 25%;
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
-  .projects1 img, .projects2 img{
+  .projects1 .iot,  .projects1 .react, .projects2 .mern2, .projects2 .css{
+    height:100%;
     width: 47%;
   }
 
+  .projects1 a img, .projects2 a img{
+    height:100%;
+    width: 100%
+  }
+
+  .mern1-label, .iot-label, .react-label, .mern2-label, .css-label{
+    position: absolute;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    bottom: 30px;
+    left:5px;
+    padding:15px;
+    font-size: var(--h4-font-size);
+  }
   .contact-me{
     margin-top: 10px;;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-  .contact-me h1{
-    width: 17%;
-  }
+ 
   .contact-me .details{
     display: flex;
     flex-direction: column;
@@ -168,23 +186,41 @@
     justify-content: space-between;
   }
  
-  .contact-me nav ul{
-    width:100%;
-  }
-  
-  .contact-me nav ul a {
-    align-items: center;
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    header,
-    main {
-      flex-direction: column;
-    }
-  
-    section {
-      padding-right: 0;
-    }
+   
+@media screen and (max-width: 992px) {
+    :root {
+        --h2-font-size:100%;
+        --h1-font-size:140%;
+        --h4-font-size:60%;
+          }
+          .mern1-label{
+            padding: 5px;
+          }
+         
 }
+@media screen and (max-width: 768px) {
+    :root {
+        --h2-font-size:70%;
+        --h1-font-size:100%;
+        --a-font-size:50%;
+        --h4-font-size:60%;
+          }
+ 
+          body {
+            font-size: 11px; /* smaller font size for screens <= 768px */
+          }  
+}
+/*
+@media screen and (max-width: 414px) {
+    pre{
+        font-size: 22px;
+        color: black;
+        text-shadow: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+    }
+}*/
+
+
+
  
