@@ -1,269 +1,331 @@
-:root{
-    --primary-color: #f1e3e3;
-    --intro-text-color:rgb(20, 20, 26);
-    --background-color:rgb(58, 49, 49);
-    --h1-font-size:180%;
-    --h2-font-size:120%;
-    --h4-font-size:100%;
-    --a-font-size:90%;
-    --left-margin:20px;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.5;
-    justify-content: flex-start;
-    font-size: 16px;
-    height: 100vh;
-    width:100vw;
-    min-height: 100vh;
-    min-width:100vw;
-    margin: 0;
-    color:var(--primary-color);
-    font-family: Monaco,Courier New, Garamond;
-    background-color:var(--background-color);;
-  }
-  
- header {
-    width: 100%;
-    background-color: #2c3033;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
- header h1 {
-    font-size: var(--h1-font-size);
-    color: #000;
-    background-color: var(--primary-color);
-    margin-left: 10% ;
-    border: 2px solid var(--intro-text-color);
-    border-radius: 100%;
-    
-    text-align: center;
-    text-shadow: 2px 2px rgb(168, 169, 175);
-  }
-    
-  header nav ul, .contact-me nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:flex-start;
-    align-items: center;
-    list-style: none;
-  }
-  header nav li , .contact-me nav li {
-    margin-right:100px;
-  }
-
-  header nav ul a, .contact-me nav ul a {
-    color: var(--primary-color);
-    font-size: var(--a-font-size);
-    text-decoration: none;
-  }
-  
-   
- main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
- }
- .intro{
-    width: 100%;
-    height: 8%;
-    display: flex;
-    position: relative;
- }
- .intro-text{
-    width: 70%;
-    height: 65%;
-    position: absolute;
-    top: calc(22%);
-    left:calc(22%);
-
-    color: var(--intro-text-color);
-    text-align: left;
-    line-height: 1.3;
-    z-index: 1;
-    font-size: var(--h2-font-size);
-    font-family: "Sofia", Cursive, sans-serif;
-    font-style: italic;
-    word-wrap: break-word;
- }
- .intro-text .name{
-  font-size: var(--h2-font-size);
-  font-family:  Cursive, sans-serif;
-  font-weight: bold;
-  line-height: 2;
- }
-
-  .bkground-img{
-    position: relative;
-    width: 100%;
-    opacity: .8;
-  }
-
-  .bkground-img:hover{
-    transform: none;
-  }
-  .intro:hover .intro-text {
-    transform: scale(1.1);
-  }
-
-  .profile-img{
-    position: absolute;
-    z-index: 9;
-    width: 15%;
-    height:80%;
-    transform: translate(20%, 10%);
-  }
-img{
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+/* variables */
+:root {
+  --primary-color: #f1e3e3;
+  --intro-text-color: rgb(20, 20, 26);
+  --background-color: rgb(58, 49, 49);
+  --h1-font-size: 180%;
+  --h2-font-size: 120%;
+  --h4-font-size: 100%;
+  --a-font-size: 90%;
 }
 
+/* Body style*/
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  justify-content: flex-start;
+  font-size: 1rem;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  color: var(--primary-color);
+  font-family: Monaco, Courier New, Garamond;
+  background-color: var(--background-color);
+  ;
+}
+
+/* Header style */
+header {
+  width: 100%;
+  background-color: #2c3033;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header heading style */
+header h1 {
+  font-size: var(--h1-font-size);
+  color: #000;
+  background-color: var(--primary-color);
+  margin-left: 10%;
+  border: 2px solid var(--intro-text-color);
+  border-radius: 100%;
+  text-align: center;
+  text-shadow: 2px 2px rgb(111, 113, 119);
+}
+
+/* Header ul , footer ul style*/
+header nav ul,
+.contact-me nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+
+/* Header, footer list style*/
+header nav li,
+.contact-me nav li {
+  margin-right: 100px;
+}
+
+/* Header , footer anchor style*/
+header nav ul a,
+.contact-me nav ul a {
+  color: var(--primary-color);
+  font-size: var(--a-font-size);
+  text-decoration: none;
+}
+
+/* Main section style*/
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Section after header style*/
+.intro {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  position: relative;
+}
+
+/* Top section <p> style*/
+.intro-text {
+  width: 70%;
+  height: 65%;
+  position: absolute;
+  top: calc(22%);
+  left: calc(22%);
+  font-weight: bold;
+  color: var(--intro-text-color);
+  text-align: left;
+  line-height: 1.3;
+  z-index: 1;
+  font-size: var(--h2-font-size);
+  font-family: "Sofia", Cursive, sans-serif;
+  font-style: italic;
+  word-wrap: break-word;
+}
+
+/* Top section's 1 of the <p> style*/
+.intro-text .name {
+  font-size: var(--h2-font-size);
+  font-family: Cursive, sans-serif;
+  font-weight: bold;
+  line-height: 2;
+}
+
+/* Top section background image style*/
+.bkground-img {
+  position: relative;
+  width: 100%;
+  opacity: .8;
+}
+
+/* Top section background image hover over style*/
+.bkground-img:hover {
+  transform: none;
+}
+
+/* Top section <p> hover over style*/
+.intro:hover .intro-text {
+  transform: scale(1.1);
+}
+
+/* Profile image style*/
+.profile-img {
+  position: absolute;
+  z-index: 9;
+  width: 15%;
+  height: 80%;
+  transform: translate(20%, 10%);
+}
+
+/* All images common style*/
+img {
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* All images hover over style*/
 img:hover {
   opacity: 0.8;
   transform: scale(1.1);
 }
- .about-me, .work{
-    width: 100%;
-    display: flex;
- }
+/* About me, work, contact-me sections style*/
+.about-me,
+.work,
+.contact-me {
+  width: 100%;
+  display: flex;
+  margin-top: .8rem;
+}
 
- .about-me h1, .work h1,.contact-me h1{
-    width: 20%;
-    font-size: var(--h1-font-size);
-    padding-top: 15px;
-    text-align: center;
-    border-right: 4px solid gray;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
-  }
-  .about-me .details, .work .details, .contact-me .details{
-    width: 75%;
-    padding: 15px;
-    margin-left: var(--left-margin);
-  }
+/* About me, work, contact-me sections heading style*/
+.about-me h1,
+.work h1,
+.contact-me h1 {
+  width: 20%;
+  font-size: var(--h1-font-size);
+  padding-top: 1rem;
+  text-align: center;
+  border-right: 4px solid gray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
 
-  .about-me .details p{
-    margin-bottom: 15px;
-  }
- .work{
-    height:45%;
-   }
+/* About me, work, contact-me sections details style*/
+.about-me .details,
+.work .details,
+.contact-me .details {
+  width: 75%;
+  padding: 1rem;
+  margin-left: 1rem;
+}
 
-  .work .details{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-  }
-  .mern1, .iot,.react,.mern2,.css{
-    height: 45%;
-    width: 100%;
-  }
-  .mern1, .iot,.react,.mern2,.css{
-    position: relative;
-  }
-  .work .details a img{
-    border: 4px solid var(--primary-color);
-    height:100%;
-    width: 100%
-  }
+/* About me section <p> style*/
+.about-me .details p {
+  margin-bottom: 1rem;
+}
 
-  .projects1, .projects2{
-    height: 25%;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .projects1 .iot,  .projects1 .react, .projects2 .mern2, .projects2 .css{
-    height:100%;
-    width: 47%;
-  }
+/* Work section height*/
+.work {
+  height: 45%;
+}
 
-  .projects1 a img, .projects2 a img{
-    height:100%;
-    width: 100%
-  }
+/* Work section details parent container style*/
+.work .details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
 
-  .mern1-label, .iot-label, .react-label, .mern2-label, .css-label{
-    position: absolute;
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    bottom: 30px;
-    left:5px;
-    padding:10px;
-    font-size: var(--h4-font-size);
-    border-radius: 5px;
-  }
-  .mern1-label{
-    padding: 10px 20px;
-  }
+/* Work section details all images common style*/
+.work .details a img {
+  border: 4px solid var(--primary-color);
+  height: 100%;
+  width: 100%
+}
 
-  .contact-me{
-    margin-top: 10px;;
-    display: flex;
-    justify-content: space-between;
-  }
- 
-  .contact-me .details{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-  }
-  .email, .phone{
-    user-select: all;
-  }
- 
-  .phone{
-    font-size: var(--a-font-size);
-  }
-  
-  li a {
-    text-decoration: none;
-    position: relative;
-  }
+/* Work section - top project container size */
+.top-project
+{
+  height: 45%;
+  width: 100%;
+  position: relative;
+}
 
-  li a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 0;
-    background-color: rgb(145, 28, 28);
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  a:hover::after {
-    width: 100%;
-  }
+/* Work section - 2nd, 3rd row projects parent container size */
+.projects-1,
+.projects-2 {
+  height: 25%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/*  Work section - 2nd, 3rd row projects Image container size */
+.projects-1 .iot,
+.projects-1 .react,
+.projects-2 .mern2,
+.projects-2 .css {
+  height: 100%;
+  width: 47%;
+  position: relative;
+}
+
+/*  Work section - projects Image labels common style */
+.mern1-label,
+.iot-label,
+.react-label,
+.mern2-label,
+.css-label {
+  position: absolute;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  bottom: 30px;
+  left: 5px;
+  padding: 10px;
+  font-size: var(--h4-font-size);
+  border-radius: 5px;
+}
+
+/*  Work section - top projects Image label additional style */
+.mern1-label {
+  padding: 10px 20px;
+}
+
+/* Contact me details section style */
+.contact-me .details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Contact me section - enail, phone text style */
+.email,
+.phone {
+  user-select: all;
+}
+
+/* Contact me section - phone text style */
+.phone {
+  font-size: var(--a-font-size);
+}
+
+/* Contact me section - <a> common style */
+li a {
+  text-decoration: none;
+  position: relative;
+}
+
+/* Contact me section - <a> pseudocode common style */
+li a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: rgb(145, 28, 28);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Contact me section - <a> pseudocode hover style */
+a:hover::after {
+  width: 100%;
+}
 
 @media screen and (max-width: 992px) {
-    :root {
-        --h2-font-size:100%;
-        --h1-font-size:140%;
-        --h4-font-size:60%;
-          }
-          .mern1-label, .iot-label, .react-label, .mern2-label, .css-label{
-            padding: 0px;
-          }
-         
-}
-@media screen and (max-width: 768px) {
-    :root {
-        --h2-font-size:90%;
-        --h1-font-size:100%;
-        --a-font-size:60%;
+  :root {
+    --h2-font-size: 100%;
+    --h1-font-size: 140%;
+    --h4-font-size: 60%;
+  }
 
-          }
- 
-          body {
-            font-size: 11px; /* smaller font size for screens <= 768px */
-          }  
+  .mern1-label,
+  .iot-label,
+  .react-label,
+  .mern2-label,
+  .css-label {
+    padding: 0px;
+  }
+
 }
+
+@media screen and (max-width: 768px) {
+  :root {
+    --h2-font-size: 90%;
+    --h1-font-size: 100%;
+    --a-font-size: 60%;
+
+  }
+
+  body {
+    font-size: 11px;
+    /* smaller font size for screens <= 768px */
+  }
+}
+
 /*
 @media screen and (max-width: 414px) {
     pre{
@@ -274,7 +336,3 @@ img:hover {
         font-style: normal;
     }
 }*/
-
-
-
- 
