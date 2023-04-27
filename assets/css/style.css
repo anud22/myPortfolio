@@ -1,10 +1,11 @@
 :root{
     --primary-color: #f1e3e3;
+    --intro-text-color:rgb(20, 20, 26);
     --background-color:rgb(58, 49, 49);
     --h1-font-size:180%;
     --h2-font-size:120%;
     --h4-font-size:100%;
-    --a-font-size:80%;
+    --a-font-size:90%;
     --left-margin:20px;
   }
   body {
@@ -35,9 +36,11 @@
     color: #000;
     background-color: var(--primary-color);
     margin-left: 10% ;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--intro-text-color);
     border-radius: 100%;
+    
     text-align: center;
+    text-shadow: 2px 2px rgb(168, 169, 175);
   }
     
   header nav ul, .contact-me nav ul{
@@ -55,7 +58,6 @@
     color: var(--primary-color);
     font-size: var(--a-font-size);
     text-decoration: none;
-    text-shadow: 2px 2px 4px #380b12;
   }
   
    
@@ -70,30 +72,42 @@
     display: flex;
     position: relative;
  }
- .pre-text{
+ .intro-text{
     width: 70%;
     height: 65%;
     position: absolute;
     top: calc(22%);
     left:calc(22%);
-    overflow: auto;
- }
-  .intro pre{
-   
+
+    color: var(--intro-text-color);
     text-align: left;
-    margin-right: 20%;
+    line-height: 1.3;
     z-index: 1;
     font-size: var(--h2-font-size);
-    text-shadow: 2px 2px 4px #000000;
     font-family: "Sofia", Cursive, sans-serif;
     font-style: italic;
+    word-wrap: break-word;
+ }
+ .intro-text .name{
+  font-size: var(--h2-font-size);
+  font-family:  Cursive, sans-serif;
+  font-weight: bold;
+  line-height: 2;
+ }
 
-  }
   .bkground-img{
     position: relative;
     width: 100%;
     opacity: .8;
   }
+
+  .bkground-img:hover{
+    transform: none;
+  }
+  .intro:hover .intro-text {
+    transform: scale(1.1);
+  }
+
   .profile-img{
     position: absolute;
     z-index: 9;
@@ -103,31 +117,39 @@
   }
 img{
     object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
- .about-me{
+
+img:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+ .about-me, .work{
     width: 100%;
     display: flex;
  }
+
  .about-me h1, .work h1,.contact-me h1{
     width: 20%;
     font-size: var(--h1-font-size);
     padding-top: 15px;
     text-align: center;
     border-right: 4px solid gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
   }
   .about-me .details, .work .details, .contact-me .details{
     width: 75%;
     padding: 15px;
     margin-left: var(--left-margin);
   }
+
   .about-me .details p{
     margin-bottom: 15px;
   }
  .work{
-    width: 100%;
     height:45%;
-    display: flex;
- }
+   }
 
   .work .details{
     display: flex;
@@ -170,9 +192,14 @@ img{
     color: var(--primary-color);
     bottom: 30px;
     left:5px;
-    padding:15px;
+    padding:10px;
     font-size: var(--h4-font-size);
+    border-radius: 5px;
   }
+  .mern1-label{
+    padding: 10px 20px;
+  }
+
   .contact-me{
     margin-top: 10px;;
     display: flex;
@@ -185,31 +212,52 @@ img{
     height: 100%;
     justify-content: space-between;
   }
-  .email .phone{
+  .email, .phone{
     user-select: all;
   }
  
   .phone{
     font-size: var(--a-font-size);
   }
-   
+  
+  li a {
+    text-decoration: none;
+    position: relative;
+  }
+
+  li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: rgb(145, 28, 28);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }
+
 @media screen and (max-width: 992px) {
     :root {
         --h2-font-size:100%;
         --h1-font-size:140%;
         --h4-font-size:60%;
           }
-          .mern1-label{
-            padding: 5px;
+          .mern1-label, .iot-label, .react-label, .mern2-label, .css-label{
+            padding: 0px;
           }
          
 }
 @media screen and (max-width: 768px) {
     :root {
-        --h2-font-size:70%;
+        --h2-font-size:90%;
         --h1-font-size:100%;
         --a-font-size:60%;
-        --h4-font-size:60%;
+
           }
  
           body {
