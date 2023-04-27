@@ -25,9 +25,11 @@ The web page present responsive layout.
 Completed web project by accomplishing following tasks -
 * Use of semantic HTML elements and ensuring web accessibilty standards are met
 * Use of advanced CSS features to make web page more interactive, responsive. 
+* <a> links get underlined when hovered. All project images get little darker and scale out when zoomed. 
 * Use of CSS variables, consolidation of selectors to make code more structured and easy to maintain.
 * Tested web page on different screen sizes.
 * Provided links to all of the deployed projects
+
 
 ### Screenshot
 ![Image 1](./assets/images/portfolio1.png) ![Image 2](./assets/images/portfolio2.png)
