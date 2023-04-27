@@ -44,11 +44,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;
-
+    align-items: center;
     list-style: none;
   }
   header nav li , .contact-me nav li {
-    margin: 0 40px;
+    margin-right:100px;
   }
 
   header nav ul a, .contact-me nav ul a {
@@ -189,6 +189,9 @@ img{
     user-select: all;
   }
  
+  .phone{
+    font-size: var(--a-font-size);
+  }
    
 @media screen and (max-width: 992px) {
     :root {
@@ -205,7 +208,7 @@ img{
     :root {
         --h2-font-size:70%;
         --h1-font-size:100%;
-        --a-font-size:50%;
+        --a-font-size:60%;
         --h4-font-size:60%;
           }
  
