@@ -22,7 +22,6 @@ body {
   color: var(--primary-color);
   font-family: Monaco, Courier New, Garamond;
   background-color: var(--background-color);
-  ;
 }
 
 /* Header style */
@@ -34,7 +33,7 @@ header {
   align-items: center;
 }
 
-/* Header heading style */
+/* Header heading - name style */
 header h1 {
   font-size: var(--h1-font-size);
   color: #000;
@@ -43,7 +42,18 @@ header h1 {
   border: 2px solid var(--intro-text-color);
   border-radius: 100%;
   text-align: center;
-  text-shadow: 2px 2px rgb(111, 113, 119);
+  font-weight: bold;
+  padding: 0.3rem;
+}
+
+/* Header nav width */
+header nav {
+  width: 70%;
+}
+
+/* Footer nav width */
+.contact-me nav {
+  width: 100%;
 }
 
 /* Header ul , footer ul style*/
@@ -59,7 +69,7 @@ header nav ul,
 /* Header, footer list style*/
 header nav li,
 .contact-me nav li {
-  margin-right: 100px;
+  margin: auto;
 }
 
 /* Header , footer anchor style*/
@@ -90,8 +100,8 @@ main {
   width: 70%;
   height: 65%;
   position: absolute;
-  top: calc(22%);
-  left: calc(22%);
+  top: calc(20%);
+  left: calc(25%);
   font-weight: bold;
   color: var(--intro-text-color);
   text-align: left;
@@ -149,6 +159,7 @@ img:hover {
   opacity: 0.8;
   transform: scale(1.1);
 }
+
 /* About me, work, contact-me sections style*/
 .about-me,
 .work,
@@ -170,10 +181,9 @@ img:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 }
 
-/* About me, work, contact-me sections details style*/
+/* About me, work, sections details style*/
 .about-me .details,
-.work .details,
-.contact-me .details {
+.work .details {
   width: 75%;
   padding: 1rem;
   margin-left: 1rem;
@@ -205,8 +215,7 @@ img:hover {
 }
 
 /* Work section - top project container size */
-.top-project
-{
+.top-project {
   height: 45%;
   width: 100%;
   position: relative;
@@ -240,16 +249,20 @@ img:hover {
   position: absolute;
   background-color: var(--background-color);
   color: var(--primary-color);
-  bottom: 30px;
-  left: 5px;
-  padding: 10px;
-  font-size: var(--h4-font-size);
+  bottom: 1.7rem;
+  left: .4rem;
+  padding: .3rem;
+  font-size: .8rem;
   border-radius: 5px;
+  width: 33%;
+  height: 15%;
+  text-align: center;
 }
 
 /*  Work section - top projects Image label additional style */
 .mern1-label {
-  padding: 10px 20px;
+  width: 20%;
+  height: 10%;
 }
 
 /* Contact me details section style */
@@ -258,6 +271,8 @@ img:hover {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  width: 100%;
+  padding-top: 1rem;
 }
 
 /* Contact me section - enail, phone text style */
@@ -295,44 +310,95 @@ a:hover::after {
   width: 100%;
 }
 
+/* Layout adjustment for screens <= 992px */
 @media screen and (max-width: 992px) {
+  /* Change font sizes */
   :root {
-    --h2-font-size: 100%;
+    --h2-font-size: 105%;
     --h1-font-size: 140%;
     --h4-font-size: 60%;
   }
 
+  /* Change projects label sizes */
   .mern1-label,
   .iot-label,
   .react-label,
   .mern2-label,
   .css-label {
     padding: 0px;
+    font-size: .5rem;
+    height: 22%;
   }
 
+  .mern1-label {
+    height: 14%;
+  }
 }
 
+/* Layout adjustment for screens <= 768px */
 @media screen and (max-width: 768px) {
+  /* Change font sizes */
   :root {
-    --h2-font-size: 90%;
-    --h1-font-size: 100%;
+    --h1-font-size: 95%;
     --a-font-size: 60%;
-
   }
 
+  /* Change top section intro font size and styling*/
+  .intro-text {
+    top: calc(15%);
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+    font-size: .8rem;
+    font-style: none;
+  }
+
+  /* Change body font size */
   body {
-    font-size: 11px;
-    /* smaller font size for screens <= 768px */
+    font-size: .8rem;
   }
 }
 
-/*
-@media screen and (max-width: 414px) {
-    pre{
-        font-size: 22px;
-        color: black;
-        text-shadow: none;
-        font-family: Arial, Helvetica, sans-serif;
-        font-style: normal;
-    }
-}*/
+/* Layout adjustment for screens <= 614px */
+@media screen and (max-width: 614px) {
+    /* Change top section intro font size */
+  .intro-text {
+    font-size: .7rem;
+  }
+  /* Change body font size */
+  body {
+    font-size: .7rem;
+  }
+}
+
+/* Layout adjustment for screens <= 454px */
+@media screen and (max-width: 454px) {
+    /* Change top section intro font size */
+  .intro-text {
+    font-size: .5rem;
+  }
+    /* Change projects labels font size */
+  .mern1-label,
+  .iot-label,
+  .react-label,
+  .mern2-label,
+  .css-label {
+    font-size: .4rem;
+    height: 33%;
+  }
+
+  .mern1-label {
+    height: 22%;
+  }
+}
+
+@media screen and (max-width: 274px) {
+   /* Do not display projects labels */
+  .mern1-label,
+  .iot-label,
+  .react-label,
+  .mern2-label,
+  .css-label {
+    display: none;
+  }
+}
