@@ -125,7 +125,7 @@ main {
 .bkground-img {
   position: relative;
   width: 100%;
-  opacity: .8;
+  filter: brightness(175%);
 }
 
 /* Top section background image hover over style*/
